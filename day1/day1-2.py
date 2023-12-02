@@ -18,7 +18,7 @@ def search_numbers(lst, s):
             start = s.index(number[0], start) + len(number[0])
     return ret
 
-f = open("inputs1-2.txt", "r")
+f = open("inputs1-1.txt", "r")
 lines = f.readlines()
 summ = 0
 for line in lines:
