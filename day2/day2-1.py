@@ -11,8 +11,8 @@ def game_check(sets):
         for data in datas:
             data = data.strip().split(' ')
             if int(data[0]) > colors[data[1]]:
-                return -1
- return 1
+                return False
+ return True
 
 summ = 0
 for line in lines:
@@ -23,7 +23,7 @@ for line in lines:
     # Separate all game sets
     sets = parse[1].split(';')
     # Check if the game is valid
-    if game_check(sets) == 1:
+    if game_check(sets) == True:
         summ += int(gameId)
    
 print(summ)
